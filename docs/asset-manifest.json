@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.js": "/static/js/main.a2be91e3.js",
-    "index.html": "/index.html",
-    "main.a2be91e3.js.map": "/static/js/main.a2be91e3.js.map"
+    "main.js": "/Trivia/static/js/main.a2be91e3.js",
+    "index.html": "/Trivia/index.html",
+    "main.a2be91e3.js.map": "/Trivia/static/js/main.a2be91e3.js.map"
   },
   "entrypoints": [
     "static/js/main.a2be91e3.js"
