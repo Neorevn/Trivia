@@ -1,10 +1,10 @@
-# Final workflow for deploying a React app from a subfolder to GitHub Pages
+# Final workflow for deploying a React app to GitHub Pages
 name: Deploy React App to GitHub Pages
 
 on:
   # Runs on pushes targeting the default branch
   push:
-    branches: ["master"]
+    branches: ["main"] # Or "master", depending on your repo's default branch
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -32,8 +32,7 @@ jobs:
         with:
           node-version: "18"
       
-      # Using a single 'run' step to explicitly change directory ('cd') 
-      # before installing and building.
+      # **FIX:** Simplified to run directly from the root of the repository
       - name: Install and Build
         run: |
           npm install
@@ -44,7 +43,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # **FIX:** Updated path to reflect the new directory name.
+          # **FIX:** Path updated to the root build folder
           path: "./build"
       
   # Deployment job
